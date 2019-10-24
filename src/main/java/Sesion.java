@@ -1,4 +1,5 @@
 import java.util.Date;
+import java.util.LinkedList;
 import java.util.List;
 
 public class Sesion implements CompanyManager{
@@ -19,7 +20,7 @@ public class Sesion implements CompanyManager{
     }
 
     public List<Employee> findAllEmployeesOrderedByName() {
-
+        List<Employee> e = new (LinkedList<Employee>)employees();
         return null;
     }
 
