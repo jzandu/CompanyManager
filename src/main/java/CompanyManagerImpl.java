@@ -8,7 +8,7 @@ public class CompanyManagerImpl implements CompanyManager{
         c.setDescription(description);
     }
 
-    public void addEmployee(String name, String surname, Date birthday, double salary, String companyName) throws MyException {
+    public void addEmployee(String name, String surname, Date birthday, double salary, String companyName){//throws MyException {
         Employee e = new Employee();
         e.setName(name);
         e.setSurname(surname);
@@ -18,8 +18,8 @@ public class CompanyManagerImpl implements CompanyManager{
     }
 
     public List<Employee> findAllEmployeesOrderedByName() {
-        Collection<E> e = new List<Employee>;
-        return List.sort();
+        List<Employee> e = new List<Employee>;
+        return List.sort(e);
     }
 
     public List<Employee> findAllEmployeesOrderedBySalary() {
