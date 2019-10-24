@@ -18,9 +18,13 @@ public class CompanyManagerImpl implements CompanyManager{
     }
 
     public List<Employee> findAllEmployeesOrderedByName() {
-        List<Employee> e = new List<Employee>;
-        return List.sort(e);
+        return Collections.sort(Comparator.naturalOrder());
     }
+
+    //public List<Employee> findAllEmployeesOrderedByName() {
+      //  List e = new List<Employee>;
+        //return e.sort(Comparator.naturalOrder());
+    //}
 
     public List<Employee> findAllEmployeesOrderedBySalary() {
         return null;

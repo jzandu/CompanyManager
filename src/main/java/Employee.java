@@ -1,6 +1,6 @@
 import java.util.Date;
 
-public class Employee implements Comparable{
+public class Employee implements Comparable {
     private String name;
     private String surname;
     private Date birthday;
@@ -50,7 +50,16 @@ public class Employee implements Comparable{
         this.companyName = companyName;
     }
 
+
+    //public int compareTo(Employee o) {
+      //  return o.getName().compareTo(this.name);
+    //}
+
+
+    @Override
     public int compareTo(Employee o) {
-        return name.compareTo(o.name);
+        Employee e = new Employee();
+        e.setName("Aa");
+        return (int)(o.name - e.name);
     }
 }
