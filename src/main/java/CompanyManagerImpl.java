@@ -1,8 +1,6 @@
-import java.util.Date;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
-public class Sesion implements CompanyManager{
+public class CompanyManagerImpl implements CompanyManager{
 
     public void addCompany(String companyName, String description) {
         Company c = new Company();
@@ -20,8 +18,8 @@ public class Sesion implements CompanyManager{
     }
 
     public List<Employee> findAllEmployeesOrderedByName() {
-        List<Employee> e = new (LinkedList<Employee>)employees();
-        return null;
+        Collection<E> e = new List<Employee>;
+        return List.sort();
     }
 
     public List<Employee> findAllEmployeesOrderedBySalary() {

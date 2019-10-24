@@ -50,8 +50,7 @@ public class Employee implements Comparable{
         this.companyName = companyName;
     }
 
-    public int compareTo(Object o) {
-        Employee o.getName();
-        return 0;
+    public int compareTo(Employee o) {
+        return name.compareTo(o.name);
     }
 }
