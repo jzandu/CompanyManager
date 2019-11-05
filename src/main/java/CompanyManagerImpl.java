@@ -1,32 +1,39 @@
 import java.util.*;
 
 public class CompanyManagerImpl implements CompanyManager{
+    /*Nos hace falta crear la lista como atributo */
+    List<Employee> employees;
+    HashSet<Company> companies;
+
+    /*Hay que crear el constructor siempre*/
+    public CompanyManagerImpl() {
+        this.employees = new LinkedList<Employee>();
+        this.companies = new HashSet<>();
+    }
 
     public void addCompany(String companyName, String description) {
-        Company c = new Company();
-        c.setCname(companyName);
-        c.setDescription(description);
+        Company c = new Company(companyName, description);
+        this.companies.add(c);
+
     }
 
     public void addEmployee(String name, String surname, Date birthday, double salary, String companyName){//throws MyException {
-        Employee e = new Employee();
-        e.setName(name);
-        e.setSurname(surname);
-        e.setBirthday(birthday);
-        e.setSalary(salary);
-        e.setCompanyName(companyName);
+        Employee e = new Employee(name,surname, birthday, salary,companyName);
+        this.employees.add(e);
     }
 
     public List<Employee> findAllEmployeesOrderedByName() {
-        return Collections.sort(Comparator.naturalOrder());
+        List e = new LinkedList<Employee>();
+        e.addAll(this.employees);
+        Collections.sort(e);
+        return e;
     }
 
-    //public List<Employee> findAllEmployeesOrderedByName() {
-      //  List e = new List<Employee>;
-        //return e.sort(Comparator.naturalOrder());
-    //}
-
     public List<Employee> findAllEmployeesOrderedBySalary() {
+        List e = new LinkedList<Employee>();
+        e.addAll(this.employees);
+        List e2 = new ListIterator<Employee>();
+        Collection.sort(e.salary);
         return null;
     }
 
