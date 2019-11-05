@@ -2,13 +2,17 @@ public class Company {
     String cname;
     String description;
 
-    public Company(){
+    public Company(String cname, String description){
+        this.setDescription(description);
+        this.setCname(cname);
 
     }
     //Los metodos get y set deben ser publicos para que puedan operar desde otra clase
+
     public String getCname(){
         return this.cname;
     }
+
     public void setCname(String n){
         this.cname=n;
     }
